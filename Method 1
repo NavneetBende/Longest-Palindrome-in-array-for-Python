@@ -1,0 +1,16 @@
+def isPalindrome(n):
+    return(str(n)==str(n)[::-1])
+n=int(input(“Enter size array1 “))
+arr1=[]
+print(“enter element”)
+for i in range(n):
+    arr1.append(int(input()))
+arr1.sort(reverse=True)
+flag=1
+for i in arr1:
+    if isPalindrome(i):
+        print(“Largest palindrome in the array is”,i)
+        flag=0
+        break 
+if(flag):
+    print(“There is no palindrome in the array”)
